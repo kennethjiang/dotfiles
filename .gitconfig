@@ -1,6 +1,6 @@
 [user]
-  name = Harry
-  email = harry.robertson@gmail.com
+  name = Kenneth
+  email = kenneth@opsvisibility.com
 [color]
   diff = auto
   status = auto
@@ -31,5 +31,5 @@
   sp = stash pop
 
 [core]
-	excludesfile = /Users/harry/.gitignore
+	#excludesfile = /Users/harry/.gitignore
 	editor = /usr/bin/vim
