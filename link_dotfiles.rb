@@ -8,7 +8,7 @@ Dir.foreach(DOTDIR) do |file|
     if File.directory? file
       # TODO(harry) Recursively create directories and symlinks, eg for .lein/profiles.clj
     else
-      `mv #{file} "bak#{file}"`
+      `rm #{file}`
       `ln -Fs #{DOTDIR}/#{file} #{file}`
       puts "#{file} => #{DOTDIR}/#{file}"
     end
