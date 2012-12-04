@@ -28,8 +28,8 @@ let g:user_zen_settings = {
 let g:indent_guides_guide_size = 1
 
 " hightlight col and line
-set cursorline
-"set cursorcolumn
+" set cursorline
+" set cursorcolumn
 
 if has("gui_running")
   colorscheme desert
