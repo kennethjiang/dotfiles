@@ -70,6 +70,9 @@ let g:fuf_coveragefile_prompt = '=>'
 " ...
 
 filetype plugin indent on     " required! 
+
+" press F8 to turn off auto-indnet
+:nnoremap <F8> :setl noai nocin nosi inde=<CR>
 "
 " Brief help
 " :BundleList          - list configured bundles
