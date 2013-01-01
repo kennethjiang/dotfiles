@@ -19,9 +19,10 @@ set imsearch=0
 set noswapfile
 " config it for change buffer without save it when changed
 set hidden "in order to switch between buffers with unsaved change
-map <silent><F8> :NERDTree<CR>
+map <silent><F6> :NERDTree<CR>
 set nu
 map <tab> :tabn<CR>
+map <S-tab> :tabprevious<CR>
 let g:user_zen_settings = {
       \  'indentation' : '  '
       \}
