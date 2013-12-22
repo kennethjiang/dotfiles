@@ -1,12 +1,47 @@
+" Setting up Vundle - the vim plugin bundler
+    let iCanHazVundle=1
+    let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+    if !filereadable(vundle_readme)
+        echo "Installing Vundle.."
+        echo ""
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        let iCanHazVundle=0
+    endif
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+    " let Vundle manage Vundle
+    " required! 
+    Bundle 'gmarik/vundle'
+    " My Bundles here:
+    "
+    " original repos on github
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'Lokaltog/vim-easymotion'
+    Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+    Bundle 'tpope/vim-rails.git'
+    Bundle 'mattn/zencoding-vim'
+    Bundle 'msanders/snipmate.vim'
+    Bundle 'vim-scripts/The-NERD-Commenter'
+    " indent guides
+    Bundle 'nathanaelkane/vim-indent-guides'
+    " indent guides shortcut
+    map <silent><F7>  <leader>ig
+    
+    Bundle 'scrooloose/nerdtree'
+    " vim-scripts repos
+    Bundle 'L9'
+    Bundle 'FuzzyFinder'
+
+    if iCanHazVundle == 0
+        echo "Installing Bundles, please ignore key map error messages"
+        echo ""
+        :BundleInstall
+    endif
+" Setting up Vundle - the vim plugin bundler end
+
 set nocompatible               " be iMproved
 filetype off                   " required!
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
 
 " my configure
 set tabstop=2
@@ -42,25 +77,7 @@ endif
 
 let mapleader= ","
 " EasyMotion_leader_key .
-" My Bundles here:
-"
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
-Bundle 'mattn/zencoding-vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'vim-scripts/The-NERD-Commenter'
-" indent guides
-Bundle 'nathanaelkane/vim-indent-guides'
-" indent guides shortcut
-map <silent><F7>  <leader>ig
 
-Bundle 'scrooloose/nerdtree'
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
 map <c-t> :FufCoverageFile!<CR>
 let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|vendor)'
 let g:fuf_enumeratingLimit = 50
@@ -69,7 +86,6 @@ let g:fuf_coveragefile_prompt = '=>'
 " if you like it more than fuf, uncomment here
 " Bundle 'git://git.wincent.com/command-t.git'
 " ...
-
 filetype plugin indent on     " required! 
 
 " press F8 to turn off auto-indnet
