@@ -23,6 +23,7 @@
     Bundle 'mattn/zencoding-vim'
     Bundle 'msanders/snipmate.vim'
     Bundle 'vim-scripts/The-NERD-Commenter'
+    Bundle 'slim-template/vim-slim'
     " indent guides
     Bundle 'nathanaelkane/vim-indent-guides'
     " indent guides shortcut
