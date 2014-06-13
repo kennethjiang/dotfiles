@@ -20,7 +20,7 @@
     Bundle 'Lokaltog/vim-easymotion'
     Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
     Bundle 'tpope/vim-rails.git'
-    Bundle 'mattn/zencoding-vim'
+    Bundle 'mattn/emmet-vim'
     Bundle 'msanders/snipmate.vim'
     Bundle 'vim-scripts/The-NERD-Commenter'
     Bundle 'slim-template/vim-slim'
