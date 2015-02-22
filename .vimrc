@@ -42,7 +42,8 @@
 " Setting up Vundle - the vim plugin bundler end
 
 set nocompatible               " be iMproved
-filetype off                   " required!
+filetype on
+syntax on
 
 " my configure
 set tabstop=2
