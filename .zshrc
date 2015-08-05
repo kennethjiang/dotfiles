@@ -10,6 +10,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+setopt caseglob
+
 # Customize to your needs...
 [[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

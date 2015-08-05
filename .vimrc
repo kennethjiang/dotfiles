@@ -46,9 +46,9 @@ filetype on
 syntax on
 
 " my configure
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set noimdisable
 set iminsert=0
@@ -81,6 +81,7 @@ let mapleader= ","
 " EasyMotion_leader_key .
 
 map <c-t> :FufCoverageFile!<CR>
+map <F2> Iimport pdb; pdb.set_trace()<CR>
 let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|vendor)'
 let g:fuf_enumeratingLimit = 50
 let g:fuf_coveragefile_prompt = '=>'
