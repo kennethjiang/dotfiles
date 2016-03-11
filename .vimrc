@@ -91,6 +91,17 @@ let g:fuf_coveragefile_prompt = '=>'
 " ...
 filetype plugin indent on     " required! 
 
+"
+" Highlight trailing whitespace
+"
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 " press F8 to turn off auto-indnet
 :nnoremap <F8> :setl noai nocin nosi inde=<CR>
 "
