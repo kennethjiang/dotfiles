@@ -32,12 +32,11 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt' \
   'osx' \
   'ruby' \
   'git' \
   'python' \
-  'syntax-highlighting'
+  'prompt'
 
 #
 # Editor
