@@ -28,11 +28,11 @@
     Bundle 'nathanaelkane/vim-indent-guides'
     " indent guides shortcut
     map <silent><F7>  <leader>ig
-    
     Bundle 'scrooloose/nerdtree'
     " vim-scripts repos
     Bundle 'L9'
     Bundle 'FuzzyFinder'
+    Plugin 'editorconfig/editorconfig-vim'
 
     if iCanHazVundle == 0
         echo "Installing Bundles, please ignore key map error messages"
@@ -71,7 +71,6 @@ let g:indent_guides_guide_size = 1
 
 if has("gui_running")
   colorscheme desert
-  set bs=2
   set ruler
   set gfn=Monaco:h16
   set shell=/bin/bash
