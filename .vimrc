@@ -33,6 +33,9 @@
     Bundle 'L9'
     Bundle 'FuzzyFinder'
     Plugin 'editorconfig/editorconfig-vim'
+    Plugin 'pangloss/vim-javascript'
+    Plugin 'mxw/vim-jsx'
+    Plugin 'maksimr/vim-jsbeautify'
 
     if iCanHazVundle == 0
         echo "Installing Bundles, please ignore key map error messages"
@@ -76,11 +79,13 @@ if has("gui_running")
   set shell=/bin/bash
 endif
 
+" javascript, JSX
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 let mapleader= ","
 " EasyMotion_leader_key .
 
 map <c-t> :FufCoverageFile!<CR>
-map <F2> Iimport pdb; pdb.set_trace()<CR>
 let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|(tmp|log|db/migrate|vendor)'
 let g:fuf_enumeratingLimit = 50
 let g:fuf_coveragefile_prompt = '=>'
@@ -101,8 +106,29 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
-" press F8 to turn off auto-indnet
-:nnoremap <F8> :setl noai nocin nosi inde=<CR>
+" code beautification
+" for jsx
+autocmd FileType javascript.jsx nnoremap <buffer> <leader>ff :call JsxBeautify()<cr>
+" javascript
+autocmd FileType javascript nnoremap <buffer> <leader>ff :call JsBeautify()<cr>
+" for json
+autocmd FileType json nnoremap <buffer> <leader>ff :call JsonBeautify()<cr>
+" for html
+autocmd FileType html nnoremap <buffer> <leader>ff :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css nnoremap <buffer> <leader>ff :call CSSBeautify()<cr>
+
+" debugger
+" for python
+autocmd FileType python nnoremap <buffer> <leader>db Iimport pdb; pdb.set_trace()<cr>
+" for ruby
+autocmd FileType ruby nnoremap <buffer> <leader>db Irequire "byebug"; byebug<cr>
+" for javascript
+autocmd FileType javascript nnoremap <buffer> <leader>db Idebugger;<cr>
+
+:nnoremap <leader>p :set paste<cr>
+:nnoremap <leader>np :set nopaste<cr>
+
 "
 " Brief help
 " :BundleList          - list configured bundles
