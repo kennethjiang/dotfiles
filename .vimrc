@@ -106,6 +106,8 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+autocmd BufRead,BufNewFile *.erb setlocal filetype=html
+
 " code beautification
 " for jsx
 autocmd FileType javascript.jsx nnoremap <buffer> <leader>ff :call JsxBeautify()<cr>
