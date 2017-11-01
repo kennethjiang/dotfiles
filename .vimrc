@@ -122,7 +122,7 @@ autocmd FileType css nnoremap <buffer> <leader>ff :call CSSBeautify()<cr>
 
 " debugger
 " for python
-autocmd FileType python nnoremap <buffer> <leader>db Iimport pdb; pdb.set_trace()<cr>
+autocmd FileType python nnoremap <buffer> <leader>db Iimport ipdb; ipdb.set_trace()<cr>
 " for ruby
 autocmd FileType ruby nnoremap <buffer> <leader>db Irequire "byebug"; byebug<cr>
 " for javascript
