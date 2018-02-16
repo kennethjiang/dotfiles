@@ -106,6 +106,8 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+autocmd BufWritePre *.rb,*.py,*.js %s/\s\+$//e
+
 autocmd BufRead,BufNewFile *.erb setlocal filetype=html
 
 " code beautification
