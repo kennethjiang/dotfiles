@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sbdchd/neoformat'
+Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
 
 " Initialize plugin system
 call plug#end()
@@ -69,8 +70,6 @@ autocmd BufWritePre *.rb,*.py,*.js %s/\s\+$//e
 
 autocmd BufRead,BufNewFile *.erb setlocal filetype=html
 
-autocmd BufWritePre *.js Neoformat
-
 " debugger
 " for python
 autocmd FileType python nnoremap <buffer> <leader>db Iimport ipdb; ipdb.set_trace()<cr>
@@ -82,12 +81,9 @@ autocmd FileType javascript nnoremap <buffer> <leader>db Idebugger;<cr>
 :nnoremap <leader>p :set paste<cr>
 :nnoremap <leader>np :set nopaste<cr>
 
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
+:nnoremap <leader>g :Grepper<cr>
+" let g:grepper = { 'next_tool': '<leader>g' }
+
+:nnoremap <leader>ff :Neoformat<cr>
+
+let g:ctrlp_max_files=0
