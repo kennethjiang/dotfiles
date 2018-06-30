@@ -7,8 +7,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'sbdchd/neoformat'
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " Initialize plugin system
 call plug#end()
@@ -84,6 +86,14 @@ autocmd FileType javascript nnoremap <buffer> <leader>db Idebugger;<cr>
 :nnoremap <leader>g :Grepper<cr>
 " let g:grepper = { 'next_tool': '<leader>g' }
 
-:nnoremap <leader>ff :Neoformat<cr>
-
 let g:ctrlp_max_files=0
+
+:nmap <Leader>ff <Plug>(Prettier)
+" Prettier config
+let g:prettier#config#print_width = 80
+let g:prettier#config#tab_width = 4
+let g:prettier#config#semi = 'false'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'all'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
