@@ -12,6 +12,9 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'karlbright/qfdo.vim'
+Plug 'maksimr/vim-jsbeautify'
+
 
 " Initialize plugin system
 call plug#end()
@@ -38,6 +41,8 @@ let g:user_zen_settings = {
       \  'indentation' : '  '
       \}
 let g:indent_guides_guide_size = 1
+set autowrite
+
 
 " hightlight col and line
 " set cursorline
@@ -95,3 +100,6 @@ let g:prettier#config#print_width = 140
 let g:prettier#config#tab_width = 4
 let g:prettier#config#trailing_comma = 'all'
 let g:prettier#config#jsx_bracket_same_line = 'false'
+
+" for html
+autocmd FileType html,eruby nnoremap <buffer> <leader>ff :call HtmlBeautify()<cr>
