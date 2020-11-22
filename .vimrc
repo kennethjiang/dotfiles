@@ -32,6 +32,7 @@ set noimdisable
 set iminsert=0
 set imsearch=0
 set noswapfile
+set tabpagemax=100
 " config it for change buffer without save it when changed
 set hidden "in order to switch between buffers with unsaved change
 set nu

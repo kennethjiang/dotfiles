@@ -113,9 +113,8 @@ alias dcl='docker-compose logs --tail=200'
 alias kb='kubectl'
 
 eval "$(pyenv init -)"
-eval "$(rbenv init -)"
 
-PATH=$PATH:$HOME/Projects/ga-ops/bin
+PATH=$PATH:$HOME/Projects/ops/bin
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 PATH=$PATH:$ANDROID_HOME/emulator
@@ -129,3 +128,7 @@ if [ -f '/usr/local/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/google-
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/usr/local/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/completion.zsh.inc'; fi
+
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:~/Library/Android/sdk/emulator:$PATH"
