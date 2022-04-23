@@ -12,7 +12,6 @@ Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 Plug 'editorconfig/editorconfig-vim'
-Plug 'karlbright/qfdo.vim'
 Plug 'maksimr/vim-jsbeautify'
 
 
