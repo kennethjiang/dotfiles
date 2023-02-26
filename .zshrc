@@ -112,8 +112,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 alias vi='vim -p'
-alias dc='docker-compose'
-alias dcl='docker-compose logs --tail=200'
+alias dc='docker compose'
+alias dcl='docker compose logs --tail=200'
 alias kb='kubectl'
 
 eval "$(pyenv init -)"
