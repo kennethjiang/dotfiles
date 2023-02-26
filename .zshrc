@@ -116,8 +116,6 @@ alias dc='docker compose'
 alias dcl='docker compose logs --tail=200'
 alias kb='kubectl'
 
-eval "$(pyenv init -)"
-
 PATH=$PATH:$HOME/Projects/ops/bin
 
 export ANDROID_HOME=$HOME/Library/Android/sdk

@@ -79,3 +79,6 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Created by `pipx` on 2023-02-26 22:58:13
+export PATH="$PATH:/Users/kenneth/.local/bin"
