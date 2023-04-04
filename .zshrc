@@ -12,6 +12,7 @@ export ZSH="/Users/kenneth/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs virtualenv)
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -68,10 +69,10 @@ setopt EXTENDED_HISTORY
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  rails
-  ruby
+  macos
   z
   zsh-autosuggestions
+  virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
