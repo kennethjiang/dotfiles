@@ -136,3 +136,5 @@ if [ -f '/usr/local/google-cloud-sdk/completion.zsh.inc' ]; then . '/usr/local/g
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:~/Library/Android/sdk/emulator:$PATH"
+
+eval "$(rbenv init - zsh)"
