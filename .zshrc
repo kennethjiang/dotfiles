@@ -135,3 +135,5 @@ if [ -f "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc" ]; then . "
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:~/Library/Android/sdk/emulator:$PATH"
 
 eval "$(rbenv init - zsh)"
+
+export AWS_PROFILE=obico
