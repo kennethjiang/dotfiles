@@ -121,9 +121,7 @@ PATH=$PATH:$HOME/Projects/ops/bin
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 PATH=$PATH:$ANDROID_HOME/emulator
-PATH=$PATH:$ANDROID_HOME/tools
 PATH=$PATH:$ANDROID_HOME/platform-tools
-PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH
 
 # The next line updates PATH for the Google Cloud SDK.
