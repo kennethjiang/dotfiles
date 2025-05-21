@@ -135,3 +135,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:~/Libra
 eval "$(rbenv init - zsh)"
 
 export AWS_PROFILE=obico
+
+#CMake < 4.0
+export PATH="/Applications/CMake.app/Contents/bin:$PATH"
