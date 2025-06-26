@@ -137,4 +137,4 @@ eval "$(rbenv init - zsh)"
 export AWS_PROFILE=obico
 
 #CMake < 4.0
-export PATH="/Applications/CMake.app/Contents/bin:$PATH"
+export PATH="/Applications/CMake.app/Contents/bin:$HOME/flutter/bin:$PATH"
