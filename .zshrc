@@ -9,10 +9,16 @@ export ZSH="/Users/kenneth/.oh-my-zsh"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs virtualenv)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
+# Conditional theme loading - disable Powerlevel9k for coding assistants
+if [[ -z "$CURSOR_AGENT" && -z "$VSCODE_INJECTION" && -z "$CODEIUM_API_KEY" ]]; then
+    # Load Powerlevel9k only when NOT in coding assistant environments
+    ZSH_THEME="powerlevel9k/powerlevel9k"
+    POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs virtualenv)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
+else
+    ZSH_THEME="robbyrussell"  # Use simple theme for coding assistants
+fi
+
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
