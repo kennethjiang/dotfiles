@@ -14,7 +14,7 @@ if [[ -z "$CURSOR_AGENT" && -z "$VSCODE_INJECTION" && -z "$CODEIUM_API_KEY" ]]; 
     # Load Powerlevel9k only when NOT in coding assistant environments
     ZSH_THEME="powerlevel9k/powerlevel9k"
     POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs virtualenv)
-    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs)
+    POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 else
     ZSH_THEME="robbyrussell"  # Use simple theme for coding assistants
 fi
